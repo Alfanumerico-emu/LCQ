@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Lucrecia Carrera Quintanar | Tarjeta Digital</title>
+  <!-- Tipografía Profesional Externa -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Variables del Sistema de Diseño */
+    :root {
+      --card-bg: rgba(15, 23, 42, 0.8); /* Azul pizarra oscuro con transparencia */
+      --text-main: #FFFFFF;
+      --text-muted: #94A3B8;
+      --accent-color: #38BDF8; /* Celeste de alta visibilidad para elementos secundarios */
+      --border-radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: var(--text-main);
+      padding: 20px;
+      overflow-x: hidden;
+      /* FONDO ANIMADO MULTICOLOR FLUIDO OPTIMIZADO PARA MÓVIL */
+      background: linear-gradient(-45deg, #0B132B, #1C2541, #0F3A20, #24325F, #111827);
+      background-size: 400% 400%;
+      animation: fluidGradient 18s ease infinite;
+    }
+
+    @keyframes fluidGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Contenedor Principal (Card Móvil) */
+    .nfc-card {
+      width: 100%;
+      max-width: 410px;
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      position: relative;
+      padding: 35px 25px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Contenedor de la Foto de Perfil */
+    .profile-container {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+
+    .profile-pic {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Encabezado e Información de Perfil */
+    .profile-info {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .name {
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .title {
+      font-size: 13px;
+      color: var(--accent-color);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .institution {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 400;
+    }
+
+    /* Lista y Estructura de Botones */
+    .buttons-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      text-decoration: none;
+      padding: 15px 18px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    /* Efectos de Interacción */
+    .btn:hover, .btn:active {
+      background-color: rgba(255, 255, 255, 0.12);
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Íconos SVG Estilo Sólido */
+    .icon-box {
+      width: 20px;
+      height: 20px;
+      margin-right: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .icon-box svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+    }
+
+    /* DISEÑO EXCLUSIVO PARA EL BOTÓN NUTRASCIENDE (Réplica de image_cdfce8.png) */
+    .btn-nutrasciende {
+      background-color: #FFFFFF !important;
+      border: 1px solid #E2E8F0;
+      justify-content: center;
+    }
+
+    .btn-nutrasciende:hover, .btn-nutrasciende:active {
+      background-color: #FAFAFA !important;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .nutra-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    .text-nu { color: #3BB300; font-weight: 700; }
+    .text-tras { color: #C29646; font-weight: 500; }
+    .text-ciende { color: #00B5EC; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <div class="nfc-card">
+    
+    <!-- Imagen de Perfil Circular modificada a formato .avif -->
+    <div class="profile-container">
+      <img src="Foto_Lu.avif" alt="Dra. Lucrecia Carrera Quintanar" class="profile-pic">
+    </div>
+
+    <!-- Metadatos de Presentación -->
+    <div class="profile-info">
+      <h1 class="name">Dra. Lucrecia Carrera Quintanar</h1>
+      <p class="title">Investigación en Cáncer Infantil y de la Adolescencia</p>
+      <p class="institution">Centro Universitario de Ciencias de la Salud | UdeG</p>
+    </div>
+
+    <!-- Bloque de Enlaces de Comunicación e Investigación -->
+    <div class="buttons-stack">
+      
+      <!-- Botón Especial Branded: NuTrasCiende sin uso de imágenes externas -->
+      <a href="https://www.nutrasciende.com/sobre-nosotros" class="btn btn-nutrasciende" target="_blank">
+        <span class="nutra-text">
+          <span class="text-nu">Nu</span><span class="text-tras">Tras</span><span class="text-ciende">Ciende</span>
+        </span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/523323745807" class="btn" target="_blank">
+        <div class="icon-box" style="color: #25D366;">
+          <svg viewBox="0 0 24 24"><path d="M12.031 21c-1.63 0-3.193-.418-4.577-1.21l-5.116 1.341 1.365-4.992A9.957 9.957 0 012.04 11.03C2.04 5.498 6.536 1 12.064 1S22.09 5.498 22.09 11.03c0 5.531-4.496 10.027-10.059 10.027v-.057zm-4.78-2.613l.317.188A8.04 8.04 0 0012.03 20c4.437 0 8.04-3.604 8.04-8.04s-3.603-8.04-8.04-8.04S3.99 7.525 3.99 11.962c0 1.488.406 2.923 1.173 4.19l.206.33-1.05 3.834 3.932-1.038v.109zm8.563-5.263c-.156-.079-2.385-1.177-2.753-1.312-.367-.136-.635-.203-.903.204-.268.406-1.036 1.311-1.27 1.58-.235.269-.47.304-.939.068-3.08-1.545-4.44-3.836-5.275-5.275-.235-.407.234-.373.903-1.71.079-.157.039-.294-.02-.452-.059-.157-.903-2.176-1.237-2.98-.323-.78-.65-.675-.903-.687-.234-.011-.502-.011-.77-.011-.268 0-.703.102-1.07.509-.368.407-1.405 1.374-1.405 3.35 0 1.977 1.439 3.886 1.64 4.157.201.272 2.835 4.331 6.866 6.074.96.414 1.71.662 2.296.848.964.306 1.84.262 2.531.159.773-.116 2.385-.975 2.72-1.916.334-.941.334-1.747.234-1.916-.1-.17-.367-.272-.836-.506z"/></svg>
+        </div>
+        Contactar por WhatsApp
+      </a>
+
+      <!-- Teléfono Directo -->
+      <a href="tel:+523323745807" class="btn">
+        <div class="icon-box" style="color: var(--accent-color);">
+          <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+        </div>
+        Llamada Telefónica
+      </a>
+
+      <!-- Correo Institucional -->
+      <a href="mailto:lucrecia.carrera@academicos.udg.mx" class="btn">
+        <div class="icon-box" style="color: #EA4335;">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        Correo Institucional
+      </a>
+
+      <!-- Curriculum Vitae PDF -->
+      <a href="https://www.cucs.udg.mx/sites/default/files/adjuntos/carrera_quintanar.pdf" class="btn" target="_blank">
+        <div class="icon-box" style="color: #FF5722;">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </div>
+        Curriculum Vitae (UdeG)
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQHXodexyK6cJQAAAZ7i1_uQHe3cpsVfivAoKOnVHfUPSC_JThaFJNC8lAgbj3lfi2oTcah1fON1Vgjhlus52BC0W9-YgUhPounkndKdwv9fzlcL1Be9ZHLdv1S-iI8pCu9WA0Q=&original_referer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fmx.linkedin.com%2Fin%2Flucrecia-susana-carrera-quintanar-35748877" class="btn" target="_blank">
+        <div class="icon-box" style="color: #0A66C2;">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </div>
+        Perfil Profesional LinkedIn
+      </a>
+
+      <!-- Google Scholar -->
+      <a href="https://scholar.google.com/citations?user=fTIs4bYAAAAJ&hl=es" class="btn" target="_blank">
+        <div class="icon-box" style="color: #4285F4;">
+          <svg viewBox="0 0 24 24"><path d="M12 2L1 9l11 7 9-5.73V17h2V9L12 2zm5.05 11.23L12 14.44l-5.05-3.21L4.2 12.9l7.8 4.97 7.8-4.97-2.75-1.47z"/></svg>
+        </div>
+        Producción Científica Scholar
+      </a>
+
+      <!-- ResearchGate -->
+      <a href="https://www.researchgate.net/profile/Lucrecia-Carrera-Quintanar" class="btn" target="_blank">
+        <div class="icon-box" style="color: #00CCBB;">
+          <svg viewBox="0 0 24 24"><path d="M19.5 3h-15A1.5 1.5 0 003 4.5v15A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0019.5 3zM9.65 16.24H8.17V7.76h1.48v8.48zm2.68-5.32c.86 0 1.48.57 1.48 1.46 0 .88-.62 1.45-1.48 1.45H11v-2.91h1.33zm1.6 5.32l1.62-2.58h-1.4l-1.12 1.8V11.2h2.04c1.37 0 2.37.93 2.37 2.22 0 1.05-.66 1.81-1.63 2.11l1.82 2.71h-1.68l-1.52-2.32H11v2.32H13.93z"/></svg>
+        </div>
+        Red de Investigación ResearchGate
+      </a>
+
+      <!-- Instituto de Investigación CUCS -->
+      <a href="https://www.cucs.udg.mx/instituto-de-investigacion-en-cancer-en-la-infancia-y-adolescencia" class="btn" target="_blank">
+        <div class="icon-box" style="color: #EAB308;">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.5 12c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3zm8.5 4.5c0-1.83-3.08-2.5-4.5-2.5S5 14.67 5 16.5V18h9v-1.5z"/></svg>
+        </div>
+        Instituto de Investigación UdeG
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>
